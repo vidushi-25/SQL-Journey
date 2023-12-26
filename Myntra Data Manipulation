@@ -1,0 +1,40 @@
+SELECT * FROM myntra.products;
+
+SELECT product_name, marked_price, discounted_price from myntra.products;
+
+SELECT product_name, marked_price, discounted_price, round(((marked_price - discounted_price)/marked_price)*100) as 'discounted_amount' from myntra.products;
+
+SELECT product_name, brand_tag as 'brand', rating, rating_count, round(rating*rating_count) as 'popularity_factor' from myntra.products;
+
+SELECT * from myntra.products WHERE
+(brand_tag = 'adidas' or 
+brand_tag = 'nike') and
+product_tag = 'shoes' and
+discounted_price > 5000 and 
+discounted_price < 7000;
+
+SELECT * from myntra.products WHERE
+brand_tag in 'adidas', 'nike' and
+product_tag = 'shoes' and
+discounted_price > 5000 and 
+discounted_price < 7000;
+
+Alternative to above :
+
+SELECT * from myntra.products WHERE
+brand_tag in 'adidas', 'nike' and
+product_tag = 'shoes' and
+discounted_price betweeb 5000 and 7000;
+
+**-- To select unique values from a column :**
+
+SELECT distinct(product_tag) from myntra.products;
+
+**-- To count the unique values from a column :**
+
+SELECT COUNT(distinct(product_tag)) from myntra.products;
+
+**--Update the values**
+
+UPDATE 
+
