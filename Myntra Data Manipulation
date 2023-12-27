@@ -9,22 +9,22 @@ SELECT product_name, brand_tag as 'brand', rating, rating_count, round(rating*ra
 SELECT * from myntra.products WHERE
 (brand_tag = 'adidas' or 
 brand_tag = 'nike') and
-product_tag = 'shoes' and
+product_tag = 'tshirts' and
 discounted_price > 5000 and 
 discounted_price < 7000;
 
 SELECT * from myntra.products WHERE
-brand_tag in 'adidas', 'nike' and
-product_tag = 'shoes' and
-discounted_price > 5000 and 
+brand_tag in ('adidas', 'nike') and
+product_tag = 'tshirts' and
+discounted_price > 2000 and 
 discounted_price < 7000;
 
 Alternative to above :
 
 SELECT * from myntra.products WHERE
-brand_tag in 'adidas', 'nike' and
-product_tag = 'shoes' and
-discounted_price betweeb 5000 and 7000;
+brand_tag in ('adidas', 'nike') and
+product_tag = 'tshirts' and
+discounted_price between 1000 and 7000;
 
 **-- To select unique values from a column :**
 
