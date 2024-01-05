@@ -28,13 +28,9 @@ discounted_price between 1000 and 7000;
 
 **-- To select unique values from a column :**
 
-SELECT distinct(product_tag) from myntra.products;
+SELECT distinct product_tag from myntra.products;
 
 **-- To count the unique values from a column :**
 
-SELECT COUNT(distinct(product_tag)) from myntra.products;
-
-**--Update the values**
-
-UPDATE 
+SELECT COUNT(distinct product_tag) from myntra.products;
 
